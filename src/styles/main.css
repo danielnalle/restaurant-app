@@ -1,0 +1,278 @@
+/* img {
+  display: block;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+a,
+button,
+input,
+textarea {
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Skip to content */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  padding: 8px;
+  background-color: #bf1722;
+  color: white;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Navigation */
+.nav {
+  background-color: #fff;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #bf1722;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: none;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0.5rem 0;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  color: #bf1722;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+}
+
+.hero img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Restaurant List */
+.content {
+  padding: 2rem 1rem;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.restaurant-item {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.restaurant-info {
+  padding: 1rem;
+}
+
+.restaurant-name {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.restaurant-city {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.restaurant-rating {
+  color: #bf1722;
+  margin-bottom: 0.5rem;
+}
+
+.restaurant-description {
+  color: #333;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Halaman Detail */
+.restaurant-detail {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.restaurant-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.restaurant-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.restaurant-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.restaurant-detail h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.restaurant-detail p {
+  margin: 5px 0;
+}
+
+.restaurant-detail ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.restaurant-detail ul li {
+  margin-bottom: 10px;
+}
+
+/* Like */
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .nav-list {
+    display: flex !important;
+    gap: 2rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .restaurant-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero img {
+    min-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .restaurant-list {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
